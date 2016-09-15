@@ -12,16 +12,13 @@ function findNums (numRangeMax, numRangeMin) {
     for (var j = numRangeMin; j < numRangeMax; j++) {
       for (var l = numRangeMin; l < numRangeMax; l++) {
         if (i + j + poliDArr[l] === 12 && i !== j && j !== l && l !== i) {
-          let newCombo = {
-            fireDNum: i,
-            poliDArr: poliDArr[l],
-            mediDNum: j
-          }
+          let newCombo = [i, j, poliDArr[l]]
           answer.push(newCombo)
         }
       }
     }
   }
+  console.log(answer)
 }
 
 findNums(7, 1);
